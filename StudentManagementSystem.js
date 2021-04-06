@@ -16,3 +16,8 @@ function clearStudent(){
     students=[];
     numberofStudents=0;
 }
+function createFullName(firstName,lastName){
+    return firstName+" "+lastName;
+}
+addStududent(createFullName("alaa","houerbi"));
+
