@@ -23,5 +23,8 @@ addStududent(createFullName("alaa","houerbi"));
 
 function getStudentInitials(name,initial){
 return name[0]===initial;
+}
 
+function isFullName(name){
+    return name.split(' ').length===2;
 }
