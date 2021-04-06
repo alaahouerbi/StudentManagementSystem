@@ -5,13 +5,14 @@ function add (number1, number2){
 };
 add(1,2);
 function addStududent(name){
-    numberofStudents++;
+    
     students.push(name);
+    numberofStudents=students.length;
 }
 function getNumberOfstudent(){
     return numberofStudents;
 }
 function clearStudent(){
     students=[];
+    numberofStudents=0;
 }
-console.log(students);
