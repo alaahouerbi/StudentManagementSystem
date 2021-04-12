@@ -19,7 +19,11 @@ function clearStudent(){
 function createFullName(firstName,lastName){
     return firstName+" "+lastName;
 }
-addStududent(createFullName("alaa","houerbi"));
+
+function getStudentsByInitials(initial){
+   const result= students.filter(s=>s[0]===initial);
+   return result;
+}
 
 
 
