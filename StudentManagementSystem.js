@@ -80,3 +80,21 @@ function removeStudent(firstName){
    students= students.filter(x=>{return x.firstName!==firstName});
    numberofStudents=students.length;
 }
+function isStudentOlder(student,age){
+    return student.age>age;
+}
+function doesStudentHaveSkills(student){
+    return student.skills.length>0;
+}
+function isStudentQualified(student){
+    return (isStudentOlder(student,18)&&doesStudentHaveSkills(student))
+}
+function numberOfStudentsOlderThan(age){
+         return students.filter(x=>{return x.age>age}).length;
+}
+function getStudentWithSkills(){
+    return students.filter(x=>x.skills && doesStudentHaveSkills(x))
+}
+function getAllStudentWithSkills(skill) {
+    return students.filter(x=>x.skills && x.skills.indexOf(skill)!==-1 );
+}
