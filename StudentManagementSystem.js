@@ -4,10 +4,16 @@ function add (number1, number2){
     return number1 + number2
 };
 add(1,2);
-function addStududent(name){
-    
-    students.push(name);
-    numberofStudents=students.length;
+addStudent(createStudent("ben","dover","email@some",21,"idk"));
+addStudent(createStudent("Hugh","Jass","someotheremail@domain",40,"same"));
+addStudent(createStudent("mike","rack","email@some",30,"RE"));
+addStudent(createStudent("Jack","Mehoff","email@some",25,"CSE"));
+addStudent(createStudent("wayne","Kerr","email@some",27,"buisness"));
+addSkills(students[0],['humor','jokes']);
+addSkills(students[1],['HTML','CSS']);
+addSkills(students[2],['C++','Java']);
+function addStudent(studentObject){
+    students.push(studentObject);
 }
 function getNumberOfstudent(){
     return numberofStudents;
@@ -51,7 +57,7 @@ function createStudent(firstName,lastName,email,age,education)
         education:education
 
     }
-    students.push(student);
+    
     return student;
     
 }
@@ -69,4 +75,8 @@ function addSkills(student,skills){
     student.skills= [...new Set(student.skills)];
     return student.skills;
    
+}
+function removeStudent(firstName){
+   students= students.filter(x=>{return x.firstName!==firstName});
+   numberofStudents=students.length;
 }
