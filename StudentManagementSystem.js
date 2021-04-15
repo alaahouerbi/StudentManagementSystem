@@ -51,6 +51,7 @@ function createStudent(firstName,lastName,email,age,education)
         education:education
 
     }
+    students.push(student);
     return student;
     
 }
@@ -59,5 +60,13 @@ delete student;
 var me=createStudent("Alaa","Houerbi","someemail@some.stuff",23,"SE");
 
 function addSkills(student,skills){
-    student.skills=skills;
+    if(student.skills===undefined){
+        student.skills=[];
+    }
+   skills.forEach(x => {
+      student.skills.push(x);
+       });
+    student.skills= [...new Set(student.skills)];
+    return student.skills;
+   
 }
